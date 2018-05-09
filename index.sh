@@ -17,13 +17,14 @@ for dir in ${PWD}/* ; do
 	echo "`basename ${dir}`"
 
 	# cp "`basename ${dir}`/results.txt" "`basename ${dir}`/index.md"
+	mv "`basename ${dir}`/index.md" "`basename ${dir}`/readme.md"
 
 	# prepend
 	# printf "\`\`\`"|cat - "`basename ${dir}`/index.md" > /tmp/out && mv /tmp/out "`basename ${dir}`/index.md"
 	# append
 	# printf "\`\`\`" >> "`basename ${dir}`/index.md"
 
-	rm "`basename ${dir}`/results.txt"
+	# rm "`basename ${dir}`/results.txt"
 
   fi
 done
